@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/micro-gateway/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/micro-gateway/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/micro-gateway",
+  "projects": {
+    "commit": {
+      "type": "application",
+      "root": "apps/commit",
+      "entryFile": "main",
+      "sourceRoot": "apps/commit/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/commit/tsconfig.app.json"
+      }
+    },
+    "commit-server": {
+      "type": "application",
+      "root": "apps/commit-server",
+      "entryFile": "main",
+      "sourceRoot": "apps/commit-server/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/commit-server/tsconfig.app.json"
+      }
+    },
+    "micro-gateway": {
+      "type": "application",
+      "root": "apps/micro-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/micro-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/micro-gateway/tsconfig.app.json"
+      }
+    },
+    "user-server": {
+      "type": "application",
+      "root": "apps/user-server",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-server/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-server/tsconfig.app.json"
+      }
+    }
+  }
+}
